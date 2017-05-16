@@ -29,12 +29,21 @@ public class Photographer {
   }
 
   public void removeCamera(Printable camera) {
-  this.cameraStore.remove(camera);
-  System.out.println(camera);
+    this.cameraStore.remove(camera);
+    System.out.println(camera);
   }
 
   public String allCameraDetails() {
-    System.out.println(this.cameraStore);
-    return "Sony ILCE5100L, No noise reduciton, Lo-resolution";
-  }
+    String cameraDetails = "Sony ILCE5100L, No noise reduciton, Lo-resolution";
+
+    for (int i=0; i<this.cameraStore.size(); i++) {
+     Printable camera = this.cameraStore.get(i);
+     cameraDetails = camera.printDetails();
+     System.out.println(i);
+     System.out.println(camera);
+     System.out.println(cameraDetails);
+   }
+   return cameraDetails;
+ }
+
 }
