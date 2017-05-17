@@ -38,7 +38,7 @@ public class Photographer {
 
     for (int i=0; i<this.cameraStore.size(); i++) {
      Printable camera = this.cameraStore.get(i);
-     cameraDetails = camera.printDetails();
+     cameraDetails = camera.printDetails() + "\n";
      System.out.println(i);
      System.out.println(camera);
      System.out.println(cameraDetails);
